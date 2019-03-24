@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace MyShop.Data.Repositories
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository:IRepository<Category>
     {
         IEnumerable<Category> GetByAlias(string alias);
     }

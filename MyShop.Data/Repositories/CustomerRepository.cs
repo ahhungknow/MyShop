@@ -3,7 +3,11 @@ using MyShop.Model.Models;
 
 namespace MyShop.Data.Repositories
 {
-    public class CustomerRepository : RepositoryBase<Customer>
+    public interface ICustomerRepository:IRepository<Customer>
+    {
+
+    }
+    public class CustomerRepository : RepositoryBase<Customer>,ICustomerRepository
     {
         public CustomerRepository(IDbFactory dbFactory) : base(dbFactory)
         {
